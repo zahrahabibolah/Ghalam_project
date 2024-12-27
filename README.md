@@ -1,10 +1,10 @@
 ## Ghalam Project
 
 ### Team Members
-- Amin MastouriNejad
+- Amin Mastouri Nezhad
 - Zahra Habibolah
 - Romina Aghili
-- Yasin GhadimiZaker
+- Yasin Ghadimi Zaker
 - Amirhosein Namavar
 
 ### Description

@@ -24,7 +24,7 @@ Ghalam is a social networking platform designed for sharing and discovering poet
 ### Installation
 
 1. Clone the repository:
-   git clone https://github.com/yourusername/Ghalam_project.git
+   git clone https://github.com/zahrahabibolah/Ghalam_project.git
 2. Navigate to the project directory:
    cd Ghalam_project
 3. Install dependencies:

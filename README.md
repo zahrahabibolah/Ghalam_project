@@ -1,5 +1,12 @@
 ## Ghalam Project
 
+### Team Members
+- Amin MastouriNejad
+- Zahra Habibolah
+- Romina Aghili
+- Yasin GhadimiZaker
+- Amirhosein Namavar
+
 ### Description
 
 Ghalam is a social networking platform designed for sharing and discovering poetry, stories, and quotes. The platform provides a creative space for writers, poets, and literature enthusiasts to showcase their talent and connect with like-minded individuals.

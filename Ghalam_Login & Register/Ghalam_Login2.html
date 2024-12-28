@@ -1,205 +1,233 @@
 <!DOCTYPE html>
 <html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>صفحه ورود - قلم</title>
     <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: Samim, sans-serif;
+        top: 0rem;
+        position: relative;
+        text-align: center;
+      }
 
-        * {
-	box-sizing: border-box;
-	margin: 0;
-	font-family: Samim, sans-serif;
-	top: 0rem;
-	position: relative;
-	text-align: center;
-        }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: right;
+        background: #ffffff;
+        height: 64rem;
+        position: relative;
+      }
 
-        body {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	text-align: right;
-	background: #ffffff;
-	height: 64rem;
-	position: relative;
-        }
+      .logo {
+        font-size: 2.5rem;
+        color: #3f51b5;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
 
-        .logo {
-            font-size: 2.5rem;
-            color: #3f51b5;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-	.image-2 {
+      .image-2 {
         position: absolute;
         top: -113.8px;
-	    left: -51px;
+        left: -51px;
         text-align: center;
-        }
-		
-        .image-3 {
-	position: absolute;
-	top: -0.8rem;
-	left: -2.5rem;
-        }
+      }
 
-        .input-group {
-            position: relative;
-            margin-bottom: 15px;
-        }
+      .image-3 {
+        position: absolute;
+        top: -0.8rem;
+        left: -2.5rem;
+      }
 
-        .input-group input {
-	width: 100%;
-	padding: 10px;
-	width: 433px;
-	height: 3.6875rem;
-	padding-right: 40px;
-	border: 1px solid #FFFFFF;
-	border-radius: 3.75rem;
-	font-size: 1.1rem;
-	outline: none;
-	text-align: center;
-	line-height: 0ex;
-	text-indent: 27px;
-	background-color: rgba(228,239,247,1.00);
-        }
+      .input-group {
+        position: relative;
+        margin-bottom: 15px;
+      }
 
-        .input-group .icon {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            cursor: pointer;
-            color: #888;
-        }
+      .input-group input {
+        width: 100%;
+        padding: 10px;
+        width: 433px;
+        height: 3.6875rem;
+        padding-right: 40px;
+        border: 1px solid #ffffff;
+        border-radius: 3.75rem;
+        font-size: 1.1rem;
+        outline: none;
+        text-align: center;
+        line-height: 0ex;
+        text-indent: 27px;
+        background-color: rgba(228, 239, 247, 1);
+      }
 
-        .btn {
-            width: 100%;
-            padding: 10px;
-            background: #465bb8;
-            border-radius: 3.75rem;
-            width: 27.0625rem;
-            height: 3.6875rem;
-            border: none;
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: #7986cb;
-            border-radius: 3.75rem;
-        }
+      .input-group .icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #888;
+      }
 
-        .links {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: rgba(70, 91, 184, 0.6);
-            text-align: center;
-            font-weight: 500
-        }
+      .btn {
+        width: 100%;
+        padding: 10px;
+        background: #465bb8;
+        border-radius: 3.75rem;
+        width: 27.0625rem;
+        height: 3.6875rem;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
 
-        .links a {
-            text-decoration: none;
-            color: hwb(229 27% 28%);;
-            font-weight: 700;
-        }
-        
-        input {
-            color: #465bb8;
-            font-weight: 700;
-            font-size: 20;
-        }
+      .btn:hover {
+        background-color: #7986cb;
+        border-radius: 3.75rem;
+      }
 
-        input::placeholder {
-            color: #8da6e4;
-            font-weight: 700;
-        }
+      .links {
+        margin-top: 15px;
+        font-size: 0.9rem;
+        color: rgba(70, 91, 184, 0.6);
+        text-align: center;
+        font-weight: 500;
+      }
 
-        .ForgeID{
+      .links a {
+        text-decoration: none;
+        color: hwb(229 27% 28%);
+        font-weight: 700;
+      }
 
-            color: rgba(70, 91, 184, 0.6);
-            text-align: center;
-            font-size: Infinityrem;
-            font-weight: 500;
-        }
+      input {
+        color: #465bb8;
+        font-weight: 700;
+        font-size: 20;
+      }
 
-        .Line1{
-            position: relative;
-            top: -3px;
-        }
+      input::placeholder {
+        color: #8da6e4;
+        font-weight: 700;
+      }
 
-        .Distance{
-            text-decoration: underline;
-            position: relative;
-            bottom: 0px;
-            padding-bottom: 15rem;
-        }
+      .ForgeID {
+        color: rgba(70, 91, 184, 0.6);
+        text-align: center;
+        font-size: Infinityrem;
+        font-weight: 500;
+      }
 
-        .links a:hover {
-            text-decoration: underline;
-        }
+      .Line1 {
+        position: relative;
+        top: -3px;
+      }
 
-        .illustration {
-            margin-top: -9px;
-        }
+      .Distance {
+        text-decoration: underline;
+        position: relative;
+        bottom: 0px;
+        padding-bottom: 15rem;
+      }
 
-        .illustration img {
-            width: 100%;
-            height: auto;
-        }
+      .links a:hover {
+        text-decoration: underline;
+      }
+
+      .illustration {
+        margin-top: -9px;
+      }
+
+      .illustration img {
+        width: 100%;
+        height: auto;
+      }
     </style>
-</head>
-<body>
-
-    <div class="Distance">
+  </head>
+  <body>
+    <div class="Distance"></div>
+    <div class="image-20">
+      <img class="image-2" src="image-20.png" alt="تصویر توضیحی" />
     </div>
-	<div class="image-20">
-		<img  class="image-2" src="image-20.png" alt="تصویر توضیحی">
-	</div>	
-    <div class="container">
+    <div class="container page active">
+      <!-- Add 'page' class and 'active' class -->
+      <div class="input-group">
+        <input
+          type="text"
+          placeholder="نام کاربری خود را وارد کنید"
+          id="username"
+        />
+      </div>
 
-        
-        
+      <div class="input-group">
+        <input
+          type="password"
+          placeholder="رمز ورود خود را وارد کنید"
+          id="password"
+        />
+        <span class="icon" onclick="togglePassword()"
+          ><img class="image-3" src="eye-no 2.png"
+        /></span>
+      </div>
 
-        <div class="input-group">
-            <input type="text" placeholder="نام کاربری خود را وارد کنید" id="username">
+      <button class="btn">ورود</button>
+
+      <div class="links">
+        <div class="ForgeID">اطلاعات ورود خود را فراموش کردید؟</div>
+        <img class="Line1" src="Line 1.png" />
+        <div>
+          اکانتی ندارید؟
+          <a href="Ghalam_Register1.html" class="nav-link">ثبت نام</a>
         </div>
-
-
-        <div class="input-group">
-            <input type="password" placeholder="رمز ورود خود را وارد کنید" id="password">
-            <span class="icon" onclick="togglePassword()"><img  class="image-3" src="eye-no 2.png"></span>
-        </div>
-
-
-        <button class="btn">ورود</button>
-
-
-        <div class="links">
-            <div class="ForgeID">اطلاعات ورود خود را فراموش کردید؟</div>
-            <img class="Line1" src="Line 1.png" />
-           <div> اکانتی ندارید؟ <a href="Ghalam_Register1.html">ثبت نام</a></div>
-        </div>
+        <!-- Added 'nav-link' class -->
+      </div>
     </div>
-
 
     <div class="illustration">
-        <img src="tiny-screenwriter-sitting-on-retro-typewriter-10.png" alt="تصویر توضیحی">
+      <img
+        src="tiny-screenwriter-sitting-on-retro-typewriter-10.png"
+        alt="تصویر توضیحی"
+      />
     </div>
 
-
     <script>
-        function togglePassword() {
-            const passwordField = document.getElementById('password');
-            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordField.setAttribute('type', type);
-        }
+      function togglePassword() {
+        const passwordField = document.getElementById("password");
+        const type =
+          passwordField.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordField.setAttribute("type", type);
+      }
+
+      // Apply fade-out transition to body
+      function addFadeOutEffect(callbackUrl) {
+        // Create a fade-out effect by adding a CSS class
+        document.body.style.transition = "opacity 0.5s ease-out";
+        document.body.style.opacity = "0";
+        setTimeout(() => {
+          window.location.href = callbackUrl;
+        }, 800); // Matches the transition duration
+      }
+
+      // Attach event listeners to the buttons
+      document.addEventListener("DOMContentLoaded", () => {
+        // Target the "ثبت نام" button (first button)
+        const loginButton = document.querySelector(".nav-link");
+        loginButton.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          addFadeOutEffect("Ghalam_Register1.html");
+        });
+      });
     </script>
-</body>
+  </body>
 </html>

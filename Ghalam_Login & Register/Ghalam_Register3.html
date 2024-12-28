@@ -1,310 +1,344 @@
 <!DOCTYPE html>
 <html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>صفحه ثبت نام - قلم</title>
     <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: Samim, sans-serif;
+        top: 0px;
+        position: relative;
+        text-align: center;
+        color: #8da6e4;
+        font-size: 20px;
+        font-weight: 700;
+      }
 
-        * {
-	box-sizing: border-box;
-	margin: 0;
-	font-family: Samim, sans-serif;
-	top: 0px;
-	position: relative;
-	text-align: center;
-	color: #8DA6E4;
-	font-size: 20px;
-	font-weight: 700;
-        }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: right;
+        background: #ffffff;
+        height: 64rem;
+        position: relative;
+      }
 
-        body {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	text-align: right;
-	background: #ffffff;
-	height: 64rem;
-	position: relative;
-        }
+      .logo {
+        font-size: 2.5rem;
+        color: #3f51b5;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
 
-        .logo {
-            font-size: 2.5rem;
-            color: #3f51b5;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+      .image-2 {
+        position: absolute;
+        top: -4.8rem;
+        text-align: center;
+        left: -54px;
+      }
 
-	.image-2 {
-	position: absolute;
-	top: -4.8rem;
-	text-align: center;
-	left: -54px;
-        }
-		
-        .image-3 {
-	position: absolute;
-	top: -0.8rem;
-	left: -2.5rem;
-        }
+      .image-3 {
+        position: absolute;
+        top: -0.8rem;
+        left: -2.5rem;
+      }
 
-        .input-group {
-            position: relative;
-            margin-bottom: 15px;
-        }
+      .input-group {
+        position: relative;
+        margin-bottom: 15px;
+      }
 
-        .input-group input {
-	width: 100%;
-	padding: 10px;
-	width: 433px;
-	height: 3.6875rem;
-	padding-right: 40px;
-	border: 1px solid #FFFFFF;
-	border-radius: 3.75rem;
-	font-size: 1.1rem;
-	outline: none;
-	text-align: center;
-	line-height: 0ex;
-	text-indent: 27px;
-	background-color: rgba(228,239,247,1.00);
-        }
+      .input-group input {
+        width: 100%;
+        padding: 10px;
+        width: 433px;
+        height: 3.6875rem;
+        padding-right: 40px;
+        border: 1px solid #ffffff;
+        border-radius: 3.75rem;
+        font-size: 1.1rem;
+        outline: none;
+        text-align: center;
+        line-height: 0ex;
+        text-indent: 27px;
+        background-color: rgba(228, 239, 247, 1);
+      }
 
-        .input-group .icon {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            cursor: pointer;
-            color: #888;
-        }
+      .input-group .icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #888;
+      }
 
-                .profile-upload {
-	width: 139px;
-	height: 139px;
-	margin: 10px auto;
-	position: relative;
-	overflow: hidden;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	background-color: rgba(228,239,247,1.00);
-	border-radius: 60px;
-        }
+      .profile-upload {
+        width: 139px;
+        height: 139px;
+        margin: 10px auto;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(228, 239, 247, 1);
+        border-radius: 60px;
+      }
 
-        input[type="file"] {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            cursor: pointer;
-        }
+      input[type="file"] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+      }
 
-        .upload-label {
-            position: absolute;
-            z-index: 1;
-            color: #8da6e4;
-            font-family: "SamimFd-Bold", sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            pointer-events: none;
-            text-align: center;
-        }
+      .upload-label {
+        position: absolute;
+        z-index: 1;
+        color: #8da6e4;
+        font-family: "SamimFd-Bold", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        pointer-events: none;
+        text-align: center;
+      }
 
-        .label-text {
-	text-align: center;
-	line-height: 1.5;
-	position: relative;
-	top: 41px;
-    font-weight: 500;
-        }
+      .label-text {
+        text-align: center;
+        line-height: 1.5;
+        position: relative;
+        top: 41px;
+        font-weight: 500;
+      }
 
-        .profile-upload img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 139px;
-	        height: 139px;
-            object-fit: cover; 
-            border-radius: 60px;
-            display: none;
-            z-index: 2; 
-        }
+      .profile-upload img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 139px;
+        height: 139px;
+        object-fit: cover;
+        border-radius: 60px;
+        display: none;
+        z-index: 2;
+      }
 
-        .profile2
-        {
-            font-weight: 700;
+      .profile2 {
+        font-weight: 700;
+      }
 
-            
-        }
+      .btn {
+        width: 100%;
+        padding: 10px;
+        background: #465bb8;
+        border-radius: 3.75rem;
+        width: 213px;
+        height: 59px;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        cursor: pointer;
+        position: relative;
+        left: 218.7px;
+      }
 
-        .btn {
-	width: 100%;
-	padding: 10px;
-	background: #465bb8;
-	border-radius: 3.75rem;
-	width: 213px;
-	height: 59px;
-	border: none;
-	color: #fff;
-	font-size: 24px;
-	font-weight: 700;
-	cursor: pointer;
-	position: relative;
-	left: 218.7px;
-        }
-        
-        .btn:hover {
-	background-color: #7986cb;
-	border-radius: 3.75rem;
-	position: relative;
-	left: 218.7px;
-        }
+      .btn:hover {
+        background-color: #7986cb;
+        border-radius: 3.75rem;
+        position: relative;
+        left: 218.7px;
+      }
 
-        .btn2 {
-	width: 100%;
-	padding: 10px;
-	background: #F79742;
-	border-radius: 3.75rem;
-	width: 213px;
-	height: 59px;
-	border: none;
-	color: #fff;
-	font-size: 24px;
-	font-weight: 700;
-	cursor: pointer;
-	position: relative;
-	right: 218.7px;
-        }
-        
-        .btn2:hover {
-	background-color: #f1ab6e;
-	border-radius: 3.75rem;
-	position: relative;
-	right: 218.7px;
-        }
+      .btn2 {
+        width: 100%;
+        padding: 10px;
+        background: #f79742;
+        border-radius: 3.75rem;
+        width: 213px;
+        height: 59px;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        cursor: pointer;
+        position: relative;
+        right: 218.7px;
+      }
 
-        .links {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: rgba(70, 91, 184, 0.6);
-            text-align: center;
-            font-weight: 500
-        }
+      .btn2:hover {
+        background-color: #f1ab6e;
+        border-radius: 3.75rem;
+        position: relative;
+        right: 218.7px;
+      }
 
-        .links a {
-            text-decoration: none;
-            color: rgba(70, 91, 184, 1);
-            font-size: 18px;
-            font-weight: 500;
-        }
+      .links {
+        margin-top: 15px;
+        font-size: 0.9rem;
+        color: rgba(70, 91, 184, 0.6);
+        text-align: center;
+        font-weight: 500;
+      }
 
-        input {
-	color: #8DA6E4;
-	font-weight: 700;
-	font-size: 20;
-        }
+      .links a {
+        text-decoration: none;
+        color: rgba(70, 91, 184, 1);
+        font-size: 18px;
+        font-weight: 500;
+      }
 
-        input::placeholder {
-            color: #8da6e4;
-            font-weight: 700;
-        }
-		
-        .Line1{
-            position: relative;
-            top: -7px;
-        }
+      input {
+        color: #8da6e4;
+        font-weight: 700;
+        font-size: 20;
+      }
 
-        .Distance{
-	text-decoration: underline;
-	position: relative;
-	bottom: 0px;
-	padding-bottom: 3.2rem;
-        }
+      input::placeholder {
+        color: #8da6e4;
+        font-weight: 700;
+      }
 
-        .links a:hover {
-            text-decoration: underline;
-        }
+      .Line1 {
+        position: relative;
+        top: -7px;
+      }
 
-        .illustration {
-            margin-top: -9px;
-        }
+      .Distance {
+        text-decoration: underline;
+        position: relative;
+        bottom: 0px;
+        padding-bottom: 3.2rem;
+      }
 
-        .illustration img {
-	width: 100%;
-	height: auto;
-	position: relative;
-	top: -4rem;
-    z-index: -1;
-        }
+      .links a:hover {
+        text-decoration: underline;
+      }
+
+      .illustration {
+        margin-top: -9px;
+      }
+
+      .illustration img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: -4rem;
+        z-index: -1;
+      }
     </style>
-</head>
-<body>
-
-    <div class="Distance">
+  </head>
+  <body>
+    <div class="Distance"></div>
+    <div class="image-20">
+      <img class="image-2" src="image-20.png" alt="تصویر توضیحی" />
     </div>
-	<div class="image-20">
-		<img  class="image-2" src="image-20.png" alt="تصویر توضیحی">
-	</div>	
     <div class="container">
+      <div class="profile-upload">
+        <label for="file-input" class="upload-label">
+          <span class="label-text">
+            انتخاب <br />
+            <div class="profile2">پروفایل</div>
+          </span>
+        </label>
+        <input type="file" id="file-input" accept="image/*" />
+        <img id="profile-pic" alt="پروفایل شما" />
+      </div>
 
-        
-        
-        <div class="profile-upload">
-            <label for="file-input" class="upload-label">
-                <span class="label-text">
-                    انتخاب <br><div class="profile2">پروفایل</div>
-                </span>
-            </label>
-            <input type="file" id="file-input" accept="image/*">
-            <img id="profile-pic" alt="پروفایل شما">
-        </div>
-        
-        <div class="input-group">
-            <input type="text" placeholder="بایوگرافی خود را وارد کنید" id="LName">
-        </div>
+      <div class="input-group">
+        <input
+          type="text"
+          placeholder="بایوگرافی خود را وارد کنید"
+          id="LName"
+        />
+      </div>
 
-        <button class="btn" type="button" onclick="window.location.href='Ghalam_Login2.html'">مرحله بعد</button>
-        <button class="btn2" type="button" onclick="window.location.href='Ghalam_Register2.html'">مرحله قبل</button>
+      <!-- Buttons for navigation -->
+      <button class="btn" type="button">مرحله بعد</button>
+      <button class="btn2" type="button">مرحله قبل</button>
 
-        <div class="vector">
+      <div class="vector">
         <img class="vector-10" src="vector 10.png" />
         <img class="vector-10" src="vector 10.png" />
         <img class="vector-10" src="vector 10.png" />
-        </div>
+      </div>
 
-        <div class="links">
-            <img class="Line1" src="Line 1.png" />
-       <br>
-            اکانت فعالی دارید؟ <a href="Ghalam_Login2.html">ورود</a>
-        </div>
+      <div class="links">
+        <img class="Line1" src="Line 1.png" />
+        <br />
+        اکانت فعالی دارید؟
+        <a href="Ghalam_Login2.html" class="login-link">ورود</a>
+      </div>
     </div>
-
 
     <div class="illustration">
-        <img src="tiny-screenwriter-sitting-on-retro-typewriter-10.png" alt="تصویر توضیحی">
+      <img
+        src="tiny-screenwriter-sitting-on-retro-typewriter-10.png"
+        alt="تصویر توضیحی"
+      />
     </div>
 
     <script>
-        const fileInput = document.getElementById('file-input');
-        const profilePic = document.getElementById('profile-pic');
+      // Profile picture upload functionality
+      const fileInput = document.getElementById("file-input");
+      const profilePic = document.getElementById("profile-pic");
 
-        fileInput.addEventListener('change', function() {
-            const file = this.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    profilePic.src = event.target.result;
-                    profilePic.style.display = "block";
-                };
-                reader.readAsDataURL(file);
-            }
+      fileInput.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (event) {
+            profilePic.src = event.target.result;
+            profilePic.style.display = "block";
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // Fade-out transition functionality
+      function addFadeOutEffect(callbackUrl) {
+        document.body.style.transition = "opacity 0.5s ease-out";
+        document.body.style.opacity = "0";
+        setTimeout(() => {
+          window.location.href = callbackUrl;
+        }, 800); // Matches the transition duration
+      }
+
+      // Attach event listeners for fade-out buttons and links
+      document.addEventListener("DOMContentLoaded", () => {
+        // "مرحله بعد" button
+        const nextButton = document.querySelector(".btn");
+        nextButton.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default behavior
+          addFadeOutEffect("Ghalam_Login2.html");
         });
+
+        // "مرحله قبل" button
+        const previousButton = document.querySelector(".btn2");
+        previousButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          addFadeOutEffect("Ghalam_Register2.html");
+        });
+
+        // "ورود" link
+        const loginLink = document.querySelector(".login-link");
+        loginLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          addFadeOutEffect("Ghalam_Login2.html");
+        });
+      });
     </script>
-</body>
+  </body>
 </html>

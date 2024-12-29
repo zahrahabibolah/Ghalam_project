@@ -1,208 +1,202 @@
 <!DOCTYPE html>
 <html lang="fa">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صفحه عضویت قلم</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Samim, sans-serif;
-      }
-
-      body {
-        text-align: center;
-        background: #ffffff;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-
-      /* محتوای کلی */
-      .desktop-1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin: auto;
-        position: relative;
-        padding: 2rem 1rem;
-      }
-
-      .tiny-screenwriter-sitting-on-retro-typewriter-1 {
-        width: 862px;
-        height: 669px;
-        margin-top: 2rem;
-        position: absolute;
-        top: 368px;
-      }
-
-      /* توضیحات */
-      .description {
-        color: #465bb8;
-        font-family: "SamimFd-Medium", sans-serif;
-        font-size: 36px;
-        font-weight: 500;
-        margin: 1.5rem 0;
-        text-align: center;
-        line-height: 1.5;
-      }
-
-      .Distance {
-        padding-top: 0px;
-        margin-top: -526px;
-      }
-
-      /* دکمه‌ها */
-      .buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem; /* فاصله بین دکمه‌ها */
-        align-items: center;
-        justify-content: center;
-        width: 433px;
-        height: 59px;
-        position: absolute;
-        top: 227px;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        text-indent: 0px;
-        line-height: 26px;
-      }
-
-      .button {
-        width: 433px;
-        height: 59px;
-        padding: 1rem 0;
-        text-align: center;
-        border-radius: 60px;
-        font-weight: 700;
-        font-size: 24px;
-        color: #ffffff;
-        text-decoration: none;
-        display: inline-block;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .button-blue {
-        background-color: #465bb8;
-      }
-
-      .button-orange {
-        background-color: #f79742;
-      }
-
-      .button:hover {
-        opacity: 0.9;
-        width: 433px;
-        height: 59px;
-      }
-
-      /* تصویر کوچک */
-      .image-2 {
-        width: 5rem;
-        height: auto;
-        margin-top: 1rem;
-        position: relative;
-        top: -100px;
-        left: -175px;
-      }
-
-      /* مدیا کوئری برای ریسپانسیو */
-      @media screen and (max-width: 768px) {
-        .description {
-          font-size: 1.5rem; /* کوچک‌تر شدن فونت توضیحات */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Samim, sans-serif;
         }
 
-        .button {
-          font-size: 1rem; /* کوچک‌تر شدن فونت دکمه‌ها */
-          padding: 0.75rem 0;
+        body {
+            text-align: center;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        .image-2 {
-          width: 4rem; /* کوچک‌تر شدن تصویر */
+        /* محتوای کلی */
+        .desktop-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: auto;
+            position: relative;
+            padding: 2rem 1rem;
         }
-      }
 
-      @media screen and (max-width: 480px) {
         .tiny-screenwriter-sitting-on-retro-typewriter-1 {
-          width: 90%; /* افزایش عرض تصویر */
+	width: 862px;
+	height: 669px;
+	margin-top: 2rem;
+	position: absolute;
+	top: 368px;
         }
 
+        /* توضیحات */
         .description {
-          font-size: 1.25rem; /* کوچک‌تر شدن فونت برای موبایل */
+	color: #465bb8;
+	font-family: "SamimFd-Medium", sans-serif;
+	font-size: 36PX;
+	font-weight: 500;
+	margin: 1.5rem 0;
+	text-align: center;
+	line-height: 1.5;
+        }
+
+        .Distance{
+	padding-top: 0px;
+	margin-top: -526px;
+        }
+
+        /* دکمه‌ها */
+        .buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem; /* فاصله بین دکمه‌ها */
+	align-items: center;
+	justify-content: center;
+	width: 433px;
+	height: 59px;
+	position: absolute;
+	top: 227px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	text-indent: 0px;
+	line-height: 26px;
         }
 
         .button {
-          width: 100%;
-          font-size: 0.875rem;
+            width: 433px;
+			height: 59px;
+            padding: 1rem 0;
+            text-align: center;
+            border-radius: 60px;
+            font-weight: 700;
+			font-size: 24px;
+            color: #ffffff;
+            text-decoration: none;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
         }
 
+        .button-blue {
+            background-color: #465bb8;
+        }
+
+        .button-orange {
+            background-color: #f79742;
+        }
+
+        .button:hover {
+	opacity: 0.9;
+    width: 433px;
+	height: 59px;
+        }
+
+        /* تصویر کوچک */
         .image-2 {
-          width: 3rem;
+	width: 5rem;
+	height: auto;
+	margin-top: 1rem;
+	position: relative;
+	top: -100px;
+	left: -175px;
         }
-      }
+
+        /* مدیا کوئری برای ریسپانسیو */
+        @media screen and (max-width: 768px) {
+            .description {
+                font-size: 1.5rem; /* کوچک‌تر شدن فونت توضیحات */
+            }
+
+            .button {
+                font-size: 1rem; /* کوچک‌تر شدن فونت دکمه‌ها */
+                padding: 0.75rem 0;
+            }
+
+            .image-2 {
+                width: 4rem; /* کوچک‌تر شدن تصویر */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .tiny-screenwriter-sitting-on-retro-typewriter-1 {
+                width: 90%; /* افزایش عرض تصویر */
+            }
+
+            .description {
+                font-size: 1.25rem; /* کوچک‌تر شدن فونت برای موبایل */
+            }
+
+            .button {
+                width: 100%;
+                font-size: 0.875rem;
+            }
+
+            .image-2 {
+                width: 3rem;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="Distance"></div>
-    <div class="desktop-1">
-      <!-- تصویر اصلی -->
-      <img
-        class="tiny-screenwriter-sitting-on-retro-typewriter-1"
-        src="tiny-screenwriter-sitting-on-retro-typewriter-10.png"
-        alt="تصویر تایپ نویس"
-      />
-
-      <!-- توضیحات -->
-      <div class="description">
-        ...&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; عضوی از خانواده فرهنگی
-      </div>
-
-      <!-- دکمه‌ها -->
-      <div class="buttons">
-        <a href="Ghalam_Login2.html" class="button button-blue">.هستم</a>
-        <a href="Ghalam_Register1.html" class="button button-orange"
-          >!می‌خواهم بشوم</a
-        >
-      </div>
-
-      <!-- تصویر کوچک -->
-      <img class="image-2" src="image-20.png" alt="تصویر توضیحی" />
+</head>
+<body>
+    
+    <div class="Distance">
     </div>
+    <div class="desktop-1">
+        <!-- تصویر اصلی -->
+        <img class="tiny-screenwriter-sitting-on-retro-typewriter-1" src="tiny-screenwriter-sitting-on-retro-typewriter-10.png" alt="تصویر تایپ نویس">
+        
+        <!-- توضیحات -->
+        <div class="description">...&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; عضوی از خانواده فرهنگی</div>
 
-    <script>
-      // Apply fade-out transition to body
-      function addFadeOutEffect(callbackUrl) {
-        // Create a fade-out effect by adding a CSS class
-        document.body.style.transition = "opacity 0.5s ease-out";
-        document.body.style.opacity = "0";
-        setTimeout(() => {
-          window.location.href = callbackUrl;
-        }, 800); // Matches the transition duration
-      }
+        <!-- دکمه‌ها -->
+        <div class="buttons">
+            <a href="login.php" class="button button-blue">.هستم</a>
+            <a href="register1.php" class="button button-orange">!می‌خواهم بشوم</a>
+        </div>
 
-      // Attach event listeners to the buttons
-      document.addEventListener("DOMContentLoaded", () => {
-        // Target the "هستم" button (first button)
-        const loginButton = document.querySelector(".button-blue");
-        loginButton.addEventListener("click", function (e) {
-          e.preventDefault(); // Prevent default link behavior
-          addFadeOutEffect("Ghalam_Login2.html");
-        });
+        <!-- تصویر کوچک -->
+        <img class="image-2" src="image-20.png" alt="تصویر توضیحی">
+    </div>
+</body>
+<script>
+    // Apply fade-out transition to body
+    function addFadeOutEffect(callbackUrl) {
+      // Create a fade-out effect by adding a CSS class
+      document.body.style.transition = "opacity 0.5s ease-out";
+      document.body.style.opacity = "0";
+      setTimeout(() => {
+        window.location.href = callbackUrl;
+      }, 800); // Matches the transition duration
+    }
 
-        // Target the "می‌خواهم بشوم" button (second button)
-        const signupButton = document.querySelector(".button-orange");
-        signupButton.addEventListener("click", function (e) {
-          e.preventDefault();
-          addFadeOutEffect("Ghalam_Register1.html");
-        });
+    // Attach event listeners to the buttons
+    document.addEventListener("DOMContentLoaded", () => {
+      // Target the "هستم" button (first button)
+      const loginButton = document.querySelector(".button-blue");
+      loginButton.addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent default link behavior
+        addFadeOutEffect("login.php");
       });
-    </script>
-  </body>
+
+      // Target the "می‌خواهم بشوم" button (second button)
+      const signupButton = document.querySelector(".button-orange");
+      signupButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        addFadeOutEffect("register1.php");
+      });
+    });
+    
+  </script>
 </html>

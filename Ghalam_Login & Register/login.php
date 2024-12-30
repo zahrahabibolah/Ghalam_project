@@ -2,19 +2,20 @@
 
 session_start();
 if (!isset($_SERVER['HTTP_REFERER']) || empty($_SERVER['HTTP_REFERER'])) {
+
     // اگر ارجاع‌دهنده وجود نداشت (کاربر مستقیماً وارد شده است)
+    session_unset(); // حذف تمام متغیرهای سشن
+    session_destroy(); // پایان جلسه
+    session_start(); // شروع مجدد جلسه
     header("Location: Ghalam_Login1.html"); // بازگشت به صفحه اول اگر اطلاعات ناقص باشد
     exit;
 }
-if (isset($_GET['clear_sessions']) && $_GET['clear_sessions'] === 'true') {
-    session_unset(); // حذف تمام متغیرهای سشن
-    session_destroy(); // پایان جلسه
-    session_start(); // شروع مجدد جلسه برای ادامه کار
-}
-if (isset($_GET['is_login']) && $_GET['is_login'] === 'true') {
-    session_unset(); // حذف تمام متغیرهای سشن
-    session_destroy(); // پایان جلسه
-    session_start(); // شروع مجدد جلسه برای ادامه کار
+
+if (isset($_SESSION['is_login'])) {
+    session_unset(); 
+    session_destroy();
+    header("Location: Ghalam_Login1.html"); // بازگشت به صفحه اول اگر اطلاعات ناقص باشد
+    exit;
 }
 // اطلاعات اتصال به پایگاه داده
 $servername = "localhost";
@@ -82,14 +83,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// بستن اتصال
+
 $conn->close();
 ?>
-
-// بستن اتصال
-
-
-
 
 <!DOCTYPE html>
 <html lang="fa">
@@ -130,8 +126,8 @@ $conn->close();
             border-radius: 16px;
             color:rgb(255, 255, 255); 
             font-size: 1rem;
-            direction: rtl; /* راست‌چین کردن متن */
-            text-align: right; /* چینش متن به سمت راست */
+            direction: rtl; 
+            text-align: right; 
             box-shadow: 6px 4px 6px rgba(21, 20, 20, 0.1);
         }
 
@@ -142,7 +138,7 @@ $conn->close();
         }
 
         .error-box ul li {
-            list-style-type: disc; /* دایره برای لیست */
+            list-style-type: disc; 
         }
 
         .logo {
@@ -337,20 +333,20 @@ $conn->close();
             }
         }
         function addFadeOutEffect(callbackUrl) {
-        // Create a fade-out effect by adding a CSS class
+        
         document.body.style.transition = "opacity 0.5s ease-out";
         document.body.style.opacity = "0";
         setTimeout(() => {
           window.location.href = callbackUrl;
-        }, 800); // Matches the transition duration
+        }, 800); 
       }
 
-      // Attach event listeners to the buttons
+     
       document.addEventListener("DOMContentLoaded", () => {
-        // Target the "ثبت نام" button (first button)
+       
         const loginButton = document.querySelector(".nav-link");
         loginButton.addEventListener("click", function (e) {
-          e.preventDefault(); // Prevent default link behavior
+          e.preventDefault(); 
           addFadeOutEffect("register1.php");
         });
       });

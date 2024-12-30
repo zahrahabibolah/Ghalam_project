@@ -1,5 +1,4 @@
 <?php
-// شروع جلسه برای دسترسی به اطلاعات صفحات قبلی
 session_start();
 
 if (isset($_SESSION['registered'])) {
@@ -19,13 +18,12 @@ if (!isset($_SERVER['HTTP_REFERER']) || empty($_SERVER['HTTP_REFERER'])) {
 }
 
 
-// تعریف متغیرها
-$biography = isset($_POST['biography']) ? trim($_POST['biography']) : ""; // مقدار پیش‌فرض
+$biography = isset($_POST['biography']) ? trim($_POST['biography']) : ""; 
 $errors = [];
 
 // بررسی ارسال فرم صفحه سوم
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['biography'])) {
-    // دریافت اطلاعات ورودی
+   
     $biography =$_POST['biography'];
 
     // اعتبارسنجی ورودی‌ها
@@ -91,7 +89,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['biography'])) {
             $biography,
             $image_path
         );
-      //  $stmt->send_long_data(6, file_get_contents($_FILES['profile_image']['tmp_name'])); 
         if ($stmt->execute()) {
             
             $sql_id = "SELECT id FROM users WHERE username = ?";
@@ -109,16 +106,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['biography'])) {
             // هدایت به صفحه ورود یا موفقیت
             header("Location: http://localhost/Ghalam/Home/Home.php");
             exit;
-            
-
+        
         }
-            
             
         } else {
             $errors[] = "خطا در ذخیره اطلاعات: " . $stmt->error;
         }
 
-        // بستن اتصال
         $stmt->close();
         $conn->close();
     }
@@ -163,8 +157,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['biography'])) {
             border: 1px solidrgb(255, 255, 255); 
             border-radius: 16px;
             color:rgb(255, 255, 255); 
-            direction: rtl; /* راست‌چین کردن متن */
-            text-align: right; /* چینش متن به سمت راست */
+            direction: rtl; 
+            text-align: right; 
             box-shadow: 6px 4px 6px rgba(21, 20, 20, 0.1);
         }
 
@@ -175,7 +169,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['biography'])) {
         }
 
         .error-box ul li {
-            list-style-type: disc; /* دایره برای لیست */
+            list-style-type: disc; 
         }
 
         .logo {
